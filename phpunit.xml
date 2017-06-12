@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <phpunit colors="true" bootstrap="vendor/autoload.php">
     <testsuites>
-        <testsuite name="SNScripts\Accessible Tests">
+        <testsuite name="SNScripts\GetSet Tests">
             <directory>tests/</directory>
         </testsuite>
     </testsuites>

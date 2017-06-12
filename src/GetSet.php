@@ -1,8 +1,8 @@
 <?php
 
-namespace Snscripts\Accessible;
+namespace Snscripts\GetSet;
 
-trait Accessible
+trait GetSet
 {
     protected $data = [];
 

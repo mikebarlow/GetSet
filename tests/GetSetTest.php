@@ -1,7 +1,7 @@
 <?php
-namespace Snscripts\Accessible\Tests;
+namespace Snscripts\GetSet\Tests;
 
-class AccessibleTest extends \PHPUnit_Framework_TestCase
+class GetSetTest extends \PHPUnit_Framework_TestCase
 {
     public function testWeCanSetAndGetData()
     {
@@ -76,7 +76,7 @@ class AccessibleTest extends \PHPUnit_Framework_TestCase
 
 class MyObject
 {
-    use \Snscripts\Accessible\Accessible;
+    use \Snscripts\GetSet\GetSet;
 
     public function setFooBarAttr($value)
     {

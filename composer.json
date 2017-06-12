@@ -1,8 +1,8 @@
 {
-    "name": "snscripts/accessible",
+    "name": "snscripts/getset",
     "description": "Trait for adding magic setters / getters to objects",
     "keywords": ["Trait", "Object Properties", "Setters", "Getters"],
-    "homepage": "https://github.com/mikebarlow/accessible",
+    "homepage": "https://github.com/mikebarlow/GetSet",
     "license": "MIT",
     "authors": [
         {
@@ -20,12 +20,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Snscripts\\Accessible\\": "src"
+            "Snscripts\\GetSet\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Snscripts\\Accessible\\Tests\\": "tests"
+            "Snscripts\\GetSet\\Tests\\": "tests"
         }
     }
 }
