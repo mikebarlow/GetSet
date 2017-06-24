@@ -28,7 +28,7 @@ And the following if you wish to run in dev mode and run tests.
 
 Simplest installation is via composer.
 
-    composer require snscripts/getset 0.*
+    composer require snscripts/getset 1.*
 
 or adding to your projects `composer.json` file.
 
