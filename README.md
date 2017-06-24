@@ -51,7 +51,53 @@ To initiate GetSet simply `use` the trait within your class
 
 ## Usage
 
+Once setup, simply set or get any variables on the object you need.
 
+    $MyClass->foo_bar = 'barfoo';
+
+    echo $MyClass->foo_bar; // barfoo
+
+This will set the variable into a `$data` array added to your object via the GetSet trait.
+
+### Variable Transformers
+
+You can create custom get / set transformers to change a variables data as it gets added to or retrieved from the `$data` variable. These should be in the format `setXAttr` and `getXAttr` where `X` is a CamelCased version of the variable you are setting or getting from the object.
+
+In the example above, basic getter / setter methods for `foo_bar` could look like:
+
+    public function setFooBarAttr($value)
+    {
+        $this->data['foo_bar'] = strtoupper($value);
+    }
+
+    public function getFooBarAttr()
+    {
+        return strtolower($this->data['foo_bar']);
+    }
+
+## Mass data assignment
+
+If you need to assign a full array of data to your object and wish for the variables to be passed through any custom setters there is the `setAllData` method.
+
+    $MyClass->setAllData([
+        'foo_bar' => 'barfoo'
+    ]);
+
+## Data Export
+
+If you need to export all the data set within your object you can use 1 of 2 methods.
+
+### toArray
+
+    $MyClass->toArray();
+
+This will simply return all data set onto the object as an array.
+
+### toJson
+
+    $MyClass->toJson();
+
+This will return all the data set onto the object as a Json object. This first uses the toArray method to retrieve an array before returning the data through `json_encode`.
 
 
 ## Changelog
